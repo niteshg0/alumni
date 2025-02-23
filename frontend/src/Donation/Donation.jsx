@@ -86,7 +86,8 @@ const Donation = () => {
             description: "Test Transaction",
             image: "/AA-logo.png",
             order_id: donate.data.donation.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-            callback_url: `http://localhost:${PORT}/api/donation/verify`,
+            // callback_url: `http://localhost:${PORT}/api/donation/verify`,
+            callback_url: `https://alumni-backend-8eqk.onrender.com/api/donation/verify`,
             prefill: {
                 "name": user?.data?.fullname || "",
                 "email": user.data.email || "",
