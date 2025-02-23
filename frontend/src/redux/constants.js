@@ -1,4 +1,4 @@
-export const BASE_URL = ""
+export const BASE_URL = "https://alumni-backend-8eqk.onrender.com"
 export const USERS_URL = "/api/users"
 export const ACADMIC_URL = "/api/academics"
 export const JOBDETAIL_URL = "/api/jobDetail"
