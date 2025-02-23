@@ -10,9 +10,16 @@ export default defineConfig(({ mode }) => {
     plugins: [react(), tailwindcss()],
     server: {
       proxy:{
-        "/api/":`http://localhost:${env.VITE_BACKEND_PORT}`
+        // "/api/":`http://localhost:${env.VITE_BACKEND_PORT}`
+
+         "/api/": {
+          target: "https://alumni-backend-8eqk.onrender.com", // New backend URL
+          changeOrigin: true,
+          secure: true, // Enable if backend uses HTTPS
+        },
+        
       },
-      port: parseInt(env.VITE_PORT)  // Read from .env, fallback to 5173
+      port: parseInt(env.VITE_PORT) || 5173 // Read from .env, fallback to 5173
     },
   };
 });
