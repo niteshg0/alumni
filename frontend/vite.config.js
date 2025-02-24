@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => {
         // "/api/":`http://localhost:${env.VITE_BACKEND_PORT}`
 
          "/api/": {
-          target: "https://alumni-backend-8eqk.onrender.com", // New backend URL
+          target: env.VITE_BACKEND_URL, // New backend URL
           changeOrigin: true,
           secure: true, // Enable if backend uses HTTPS
         },
